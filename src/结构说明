@@ -1,0 +1,7 @@
+根据路由描述
+
+app
+  |- main-page
+  |- app.component
+
+
