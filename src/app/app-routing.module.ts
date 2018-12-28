@@ -1,5 +1,5 @@
 import {NgModule} from '@angular/core';
-import {MainPageComponent} from './main-page/main-page.component';
+import {MainPageComponent} from './page-construction/main-page/main-page.component';
 // import {AppComponent} from './app.component';
 import {RouterModule, Routes} from '@angular/router';
 
