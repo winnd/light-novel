@@ -13,10 +13,11 @@ import {MainPageComponent} from './main-page/main-page.component';
 import {AppRoutingModule} from './app-routing.module';
 import {PageHeaderComponent} from './page-construction/page-header/page-header.component';
 import {SearchBarComponent} from './component-functional/search-bar/search-bar.component';
-import {AutoCompleteData} from './mock-data/autoCompleteData';
+import {AutoCompleteData} from '../data/mock-data/autoCompleteData';
 import {HttpClientInMemoryWebApiModule} from 'angular-in-memory-web-api';
 import {IconDefinition} from '@ant-design/icons-angular';
 import * as AllIcons from '@ant-design/icons-angular/icons';
+import { NavBarTopComponent } from './page-construction/nav-bar-top/nav-bar-top.component';
 
 registerLocaleData(zh);
 
@@ -29,6 +30,7 @@ const icons: IconDefinition[] = Object.keys(antDesignIcons).map(key => antDesign
     MainPageComponent,
     PageHeaderComponent,
     SearchBarComponent,
+    NavBarTopComponent,
   ],
   imports     : [
     BrowserModule,

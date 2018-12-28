@@ -1,18 +1,18 @@
 .app-header-background {
-  width: 100%;
-  background: antiquewhite;
   height: 170px;
+  background: antiquewhite;
+  display: flex;
+  flex-flow: column;
+  position: relative;
 
   .header-wrapper {
-    margin: 0 auto;
-    width: 1024px;
     height: 42px;
     display: flex;
     justify-content: space-between;
     flex-flow: row nowrap;
     background: lime;
 
-    .left{
+    .left {
       nav.nav-bar {
         display: flex;
         flex-flow: row nowrap;
@@ -20,9 +20,10 @@
       }
     }
 
-    .right{
+    .right {
       display: flex;
       flex-flow: row nowrap;
+
       img.avator {
         display: block;
         width: 40px;
@@ -30,5 +31,13 @@
       }
     }
   }
+
+  .search-bar {
+    width: 200px;
+    position: absolute;
+    bottom: 20px;
+    right: 0;
+  }
 }
+
 

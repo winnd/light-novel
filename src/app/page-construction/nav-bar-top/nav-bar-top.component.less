@@ -1,0 +1,33 @@
+.nav-bar-top-wrapper {
+  ul {
+    margin: 8px 0 5px 0;
+    display: flex;
+    li {
+      background: white;
+      a {
+        display: inline-block;
+        width: 48px;
+        height: 48px;
+      }
+      ul.sub-nav {
+        margin: 0;
+        display: none;
+        flex-flow: column;
+        padding: 0;
+        position: absolute;
+        cursor: pointer;
+        li {
+          min-width: 110px;
+          padding: 5px 15px 5px 25px;
+          margin-right: 5px;
+          &:hover {
+            background-color: #e5e9ef;
+          }
+        }
+      }
+      &:hover ul.sub-nav {
+        display: flex;
+      }
+    }
+  }
+}
