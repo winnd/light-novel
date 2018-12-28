@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-chart-room',
@@ -7,9 +7,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ChartRoomComponent implements OnInit {
 
-  constructor() { }
+  constructor() {
+  }
 
   ngOnInit() {
+    // Array.from(document.getElementsByTagName('*')).map(x => {
+    //   x.style.background = '#' + Math.floor(Math.random() * 10e6).toString(16);
+    // });
   }
 
 }

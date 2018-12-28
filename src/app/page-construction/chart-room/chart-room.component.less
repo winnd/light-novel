@@ -1,6 +1,74 @@
-.chart-room-wrapper{
+@avater-width: 50px; // 头像宽
+@avater-height: 50px; // 头像高
+
+.chart-room-wrapper {
+  display: flex;
+  flex-flow: row nowrap;
+  font-size: 10px;
   width: 200px;
-  .header{
-    .rgiht
+  background: yellow;
+  .left-nav {
+    flex: 0 50px;
+    background: red;
+    img.avatar {
+      width: @avater-width;
+      height: @avater-height;
+      border-radius: 50%;
+    }
+    ul.chart-list {
+      display: flex;
+      flex-flow: column nowrap;
+      max-height: 300px;
+      background: greenyellow;
+      li {
+        width: @avater-width;
+        height: @avater-height;
+        cursor: pointer;
+        img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+    }
+  }
+  .right-chart-room {
+    flex: 1;
+    background: blue;
+    .header {
+      display: flex;
+      height: @avater-height;
+      align-content: center;
+      justify-content: space-between;
+      .left.tab-bar {
+        flex: 1;
+        background: orange;
+        img.contacts-img {
+          width: 50px;
+          height: 50px;
+        }
+      }
+      .right.options {
+        flex: 0 70px;
+        display: flex;
+        flex-flow: column nowrap;
+        background: green;
+        ul {
+          display: flex;
+          flex-flow: row nowrap;
+          li {
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+            background: aqua;
+          }
+        }
+        .search-bar {
+
+        }
+      }
+    }
+    .body {
+      display: flex;
+    }
   }
 }
