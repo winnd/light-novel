@@ -3,32 +3,46 @@
   background: antiquewhite;
   height: 170px;
 
-  .header-wrapper {
+  .head-wrapper {
     margin: 0 auto;
     width: 1024px;
-    height: 42px;
-    display: flex;
-    justify-content: space-between;
-    flex-flow: row nowrap;
-    background: lime;
+    height: 100%;
+    background: aquamarine;
+    position: relative;
+    .nav-wrapper {
+      height: 42px;
+      display: flex;
+      justify-content: space-between;
+      flex-flow: row nowrap;
+      background: lime;
 
-    .left{
-      nav.nav-bar {
+      .left {
+        nav.nav-bar {
+          display: flex;
+          flex-flow: row nowrap;
+          flex: 1;
+        }
+      }
+
+      .right {
         display: flex;
         flex-flow: row nowrap;
-        flex: 1;
+
+        img.avator {
+          display: block;
+          width: 40px;
+          height: 40px;
+        }
       }
     }
-
-    .right{
-      display: flex;
-      flex-flow: row nowrap;
-      img.avator {
-        display: block;
-        width: 40px;
-        height: 40px;
-      }
+    .search-bar{
+      width: 250px;
+      position: absolute;
+      right: 0px;
+      bottom: 0px;
     }
   }
 }
-
+*{
+  background: white !important;
+}
