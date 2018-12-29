@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		body, html {height: 100%;}
+        .background {width: 1000px;height: 100%;}
+	</style>
+</head>
+<body>
+	<div class="background">
+		
+	</div>
+</body>
+<script>
+	var ws        = null;
+    var html      = '';
+    var heartflag = false;
+    var tryTime   = 0;
+    
+    window.onbeforeunload = function () {
+      // 关闭socket
+    };
+    
+    function initSocket() {
+      var userId        = '用户a';
+      var serverAddress = 'ws://BJI065-L0507833:8011/';
+      
+      if (!window.WebSocket) {
+        alert("您的浏览器不支持ws");
+        return;
+      }
+      
+      ws = new WebSocket(serverAddress + userId);
+      
+      ws.onmessage = function (e) {
+        if (msg.data == '&') {
+          
+        } else {
+          html += `<div>${e.data}</div>`;
+          document.querySelector(".background").innerHTML = html;
+          console.log(e);
+        }
+      };
+      
+      ws.onerror = ev => {
+        heartflag = false;
+        alert('异常');
+        console.log(ev);
+      };
+      
+      ws.onopen = ev => {
+        heartflag = true;
+        heart();
+        console.log('连接成功');
+        tryTime = 0;
+      };
+      
+      ws.onclose = ev => {
+        heartflag = false;
+        // 重试10次，每次之间间隔10秒
+        if (tryTime < 10) {
+          setTimeout(() => {
+            ws = null;
+            tryTime++;
+            initSocket();
+            console.log('第几次重连');
+          });
+        } else {
+          alert("重连");
+        }
+      };
+      
+      function send() {
+        ws.send("滴滴滴");
+      }
+      
+      function clearConnectStatu() {
+        console.log('清除连接状态');
+      }
+      
+      function getNowFormatDate() {
+        var date = new Date().toLocaleDateString().replace(/\//g, '-');			// 2018-12-29
+        return date;
+      }
+      
+      // 心跳
+      function heart() {
+        if (heartflag) {
+          ws.send("$");
+          console.log(getNowFormatDate() + '心跳');
+        }
+        setTimeout('heart()', 10 * 60 * 1000);
+        
+      }
+    }
+    
+    
+</script>
+</html>
