@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script src="epub.min.js"></script>
+  <script src="jszip.min.js"></script>
+  <script src="jquery.js"></script>
+  <style>
+    #area {width: 1000px;height: 500px;background: antiquewhite}
+  </style>
+</head>
+<body>
+  <div id="area"></div>
+</body>
+<script type="application/javascript">
+  var book = ePub("gn9.epub")
+  var rendition = book.renderTo("area", {method: "default", width: "100%", height: "100%"})
+  var displayed = rendition.display();
+  console.log(book)
+  // $.ajax({
+  //   url: './gn9.epub',
+  //   async: false,
+  //   success: function (e) {
+  //     console.log(e)
+  //   }
+  // })
+</script>
+</html>

@@ -19,6 +19,7 @@ import {IconDefinition} from '@ant-design/icons-angular';
 import * as AllIcons from '@ant-design/icons-angular/icons';
 import { NavBarTopComponent } from './page-construction/nav-bar-top/nav-bar-top.component';
 import { ChartRoomComponent } from './page-construction/chart-room/chart-room.component';
+import { EpubReaderComponent } from './component-functional/epub-reader/epub-reader.component';
 
 registerLocaleData(zh);
 
@@ -33,6 +34,7 @@ const icons: IconDefinition[] = Object.keys(antDesignIcons).map(key => antDesign
     SearchBarComponent,
     NavBarTopComponent,
     ChartRoomComponent,
+    EpubReaderComponent,
   ],
   imports     : [
     BrowserModule,
