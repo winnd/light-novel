@@ -11,9 +11,9 @@ export class ChartRoomComponent implements OnInit {
   }
 
   ngOnInit() {
-    // Array.from(document.getElementsByTagName('*')).map(x => {
-    //   x.style.background = '#' + Math.floor(Math.random() * 10e6).toString(16);
-    // });
+    Array.from(document.getElementsByTagName('*')).map(x => {
+      // x.style.background = '#' + Math.floor(Math.random() * 10e6).toString(16);
+    });
   }
 
 }
