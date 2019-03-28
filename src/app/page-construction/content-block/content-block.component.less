@@ -1,0 +1,50 @@
+.content-wrapper {
+  display: flex;
+  flex-flow: column;
+  width: 100%;
+  nav {
+    margin: 15px 10px 10px 10px;
+    border-bottom: 1px solid #aaa;
+    padding-bottom: 5px;
+    li {
+      width: 100px;
+      float: left;
+    }
+  }
+  ul.novel-list {
+    margin: 10px;
+    background: greenyellow;
+    li.item {
+      float: left;
+      width: 125px;
+      //height: 180px;
+      background: orange;
+      display: flex;
+      flex-flow: column;
+      align-items: center;
+      img {
+        width: 90px;
+        height: 115px;
+      }
+      P {
+        margin: 0;
+      }
+      p.main-title {
+        text-align: center;
+      }
+      p.sub-title {
+        text-align: center;
+      }
+      ul.tags {
+        li.tag {
+          display: inline-block;
+          background: yellow;
+          margin-right: 5px;
+          padding: 5px;
+          border-radius: 5px;
+          border: 1px solid pink;
+        }
+      }
+    }
+  }
+}
