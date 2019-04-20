@@ -23,6 +23,9 @@ import {ContentBlockComponent} from './page-construction/content-block/content-b
 import {LeftSideNavComponent} from './page-construction/left-side-nav/left-side-nav.component';
 import {BookDetailComponent} from './page-construction/book-detail/book-detail.component';
 import {EpubReaderComponent} from './component-functional/epub-reader/epub-reader.component';
+import { AdBlockComponent } from './page-construction/ad-block/ad-block.component';
+import { PageFooterComponent } from './page-construction/page-footer/page-footer.component';
+import { CarouseComponent } from './page-construction/carouse/carouse.component';
 
 registerLocaleData(zh);
 
@@ -41,6 +44,9 @@ const icons: IconDefinition[] = Object.keys(antDesignIcons).map(key => antDesign
     LeftSideNavComponent,
     BookDetailComponent,
     EpubReaderComponent,
+    AdBlockComponent,
+    PageFooterComponent,
+    CarouseComponent,
   ],
   imports: [
     BrowserModule,

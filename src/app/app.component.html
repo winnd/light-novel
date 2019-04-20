@@ -1,12 +1,47 @@
 <!-- NG-ZORRO -->
 <div class="background">
   <div class="main-wrapper">
-    <!--<app-page-header></app-page-header>-->
+
+    <!--头部导航-->
+    <app-page-header></app-page-header>
     <!--<app-main-page></app-main-page>-->
     <!--<app-nav-bar-top></app-nav-bar-top>-->
     <!--<app-chart-room></app-chart-room>-->
-    <!--<app-content-block></app-content-block>-->
-    <!--<app-left-side-nav></app-left-side-nav>-->
+    <!--<div class="carouse-box">-->
+    <!--<div class="app-carouse">-->
+    <!--<app-carouse></app-carouse>-->
+    <!--</div>-->
+    <!--<div class="nav">-->
+    <!--<li>封面1</li>-->
+    <!--<li>封面2</li>-->
+    <!--<li>封面3</li>-->
+    <!--</div>-->
+    <!--</div>-->
+    <div class="app-carouse">
+      <app-carouse></app-carouse>
+    </div>
+
+    这是中间的block 只显示一行内容， 用来推荐内容 可左右拉动
+    <!--这是中间的block 只显示一行内容， 用来推荐内容 可左右拉动-->
+    <app-content-block></app-content-block>
+
+    <!--中间的主要组建 展示小说列表-->
+    <div class="app-content-wrapper">
+      <div class="app-content-block-wrapper">
+        <app-content-block></app-content-block>
+      </div>
+      <div class="app-left-side-nav-wrpper">
+        <app-left-side-nav></app-left-side-nav>
+      </div>
+    </div>
+
+    <!--测试组建, 需要删除-->
     <app-book-detail></app-book-detail>
+
+
+    <!--广告组件, 用来占位撑页面-->
+    <app-ad-block></app-ad-block>
+
   </div>
+  <app-page-footer></app-page-footer>
 </div>

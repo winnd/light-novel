@@ -1,31 +1,41 @@
 <div class="content-wrapper">
-  <nav>
+  <ul>
     <li>最新更新</li>
     <li>最多收藏</li>
     <li>人气排行</li>
-  </nav>
+  </ul>
   <ul class="novel-list">
     <li class="item">
       <img src="../../../assets/img/1.jpg" alt="aaa">
-      <p class="main-title">My妹~小恶魔般的A CUP</p>  <!--大标题-->
-      <p class="sub-title">[わかつきひかる]</p>  <!--小标题 原标题-->
-      <ul class="tags">
-        <li class="tag">足控</li>
-        <li class="tag">女仆</li>
-        <li class="tag">中国</li>
-        <li class="tag">日本</li>
-        <li class="tag">...</li>
-      </ul>
+      <p class="main-title">My妹~小恶魔般的A CUP - わかつきひかる</p>  <!--大标题-->
+      <!--<p class="sub-title">可能存在的子标题</p>-->
+      <p class="update-content">第四卷</p>
+      <p class="author">作者:aa</p>  <!--小标题 原标题-->
+      <p class="time">更新:2019-01-01</p>  <!--小标题 原标题-->
+      <!--<ul class="tags">-->
+        <!--<li class="tag">足控</li>-->
+        <!--<li class="tag">女仆</li>-->
+        <!--<li class="tag">中国</li>-->
+        <!--<li class="tag">日本</li>-->
+        <!--<li class="tag">...</li>-->
+      <!--</ul>-->
     </li>
   </ul>
+
+  <a class="more">更多>></a>
 </div>
 
-<!--<nz-tabset>-->
-<!--<nz-tab *ngFor="let tab of tabs" [nzTitle]="titleTemplate">-->
-<!--<ng-template #titleTemplate>-->
-<!--<i nz-icon [type]="tab.icon"></i>{{tab.name}}-->
-<!--</ng-template>-->
-<!--{{tab.name}}-->
-<!--</nz-tab>-->
-<!--</nz-tabset>-->
-
+之后可能要考虑懒加载
+<nz-tabset [nzTabBarExtraContent]="extraTemplate" >
+  <nz-tab *ngFor="let tab of tabs" [nzTitle]="titleTemplate">
+    <ng-template #titleTemplate>
+      {{tab.name}}
+    </ng-template>
+    {{tab.name}}
+  </nz-tab>
+</nz-tabset>
+<ng-template #extraTemplate>
+  评论预览(用localhost做本地缓存)
+  <nz-switch [ngModel]="true" nzCheckedChildren="开" nzUnCheckedChildren="关"></nz-switch>
+  <br />
+</ng-template>

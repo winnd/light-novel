@@ -9,17 +9,18 @@ export class ContentBlockComponent implements OnInit {
 
   tabs = [{
     active: true,
-    name: 'Tab1',
-    icon: 'applle'
+    name: '最新更新'
   }, {
     active: true,
-    name: 'Tab2',
-    icon: 'apple'
+    name: '最多收藏'
+  }, {
+    active: true,
+    name: '人气排行'
   }];
 
-  items =[{
-    title:''
-  }]
+  items = [{
+    title: ''
+  }];
 
   constructor() {
   }
